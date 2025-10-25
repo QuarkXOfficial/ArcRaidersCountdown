@@ -1,0 +1,218 @@
+    /* ---------- Global ---------- */
+    * {
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+        scroll-padding-top: calc(4 * 1rem);
+    }
+
+    html {
+        font-size: 100%;
+        line-height: 1.15;
+        -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        background-color: #ece2d0;
+        color: #130918;
+        font-family: 'Barlow', sans-serif;
+        font-weight: 400;
+        overflow-x: hidden;
+        overflow-y: auto;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* ---------- Header ---------- */
+    header {
+        background-color: #ece2d0;
+        color: #130918;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .logo img {
+        height: 32px;
+        width: auto;
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: #130918;
+        font-weight: 500;
+        transition: opacity 0.2s;
+    }
+
+    .nav-links a:not(.button_button__HOmVR):hover {
+        opacity: 0.7;
+    }
+
+    /* ---------- Pre-order Button ---------- */
+    .button_button__HOmVR {
+        padding: 0;
+        appearance: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid transparent;
+        border-radius: 8px;
+        cursor: pointer;
+        text-decoration: none;
+        position: relative;
+    }
+
+    .header_ctaButton__B_Zf4 {
+        padding: calc(0.5 * 1rem) calc(1 * 1rem);
+        border-radius: 5px;
+        line-height: 17px;
+        max-width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+    }
+
+    .button_button-color-light__QvtV1 {
+        background: #f1aa1c;
+        color: #130918;
+    }
+
+    .button_button__HOmVR.button_button-text-default__cfuPA {
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    /* ---------- Hover with Fade + Scale ---------- */
+    .button_button__HOmVR {
+        position: relative;
+    }
+
+    /* Simple yellow outline on hover with a small gap */
+    .button_button__HOmVR:hover {
+        outline: 2px solid #f1aa1c;
+        /* yellow outline */
+        outline-offset: 2px;
+        /* small gap */
+    }
+
+    /* ---------- Countdown ---------- */
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 90vh;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        color: #130918;
+    }
+
+    .countdown {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .time-box {
+        background: white;
+        border-radius: 12px;
+        padding: 1.5rem 2rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        min-width: 100px;
+    }
+
+    .time {
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: #f1aa1c;
+    }
+
+    .label {
+        font-size: 1rem;
+        color: #130918;
+        margin-top: 0.3rem;
+    }
+
+    .divider {
+        height: 2px;
+        width: 80%;
+        background-color: #f1aa1c;
+        margin: 2rem auto;
+    }
+
+    p {
+        font-size: 18px;
+        color: #130918;
+        margin-top: 0;
+    }
+
+    footer {
+        text-align: center;
+        font-size: 0.9rem;
+        color: #130918;
+        margin: 1rem 0;
+    }
+
+    /* Hero background */
+    .hero-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.2;
+        z-index: -1;
+    }
+
+    /* Cards row */
+    .cards-row {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+    }
+
+    .cards-row img {
+        height: 100px;
+        width: auto;
+        border-radius: 8px;
+    }
+
+    
