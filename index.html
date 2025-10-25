@@ -1,102 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+<script>
+  // Set target date to October 30, 2025 at 10:00 GMT
+  const targetDate = new Date("October 30, 2025 10:00:00 GMT").getTime();
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Countdown to October 30, 2025</title>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="img/faviconV2.png" />
-</head>
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const diff = targetDate - now;
 
-<body>
-<!-- ---------- NAV ---------- -->
-<header>
-  <div class="nav-container">
-    <div class="logo">
-      <img src="./img/ARC_Raider_Horizontal_Black_Color.png" alt="Arc Raiders Logo" />
-    </div>
-    <div class="nav-links">
-      <a href="#countdown">Countdown</a>
-      <a href="https://arcraiders.com/en/news/" target="_blank" rel="noopener noreferrer">News</a>
-      <a href="https://arcraiders.com/en/index.html#media" target="_blank" rel="noopener noreferrer">Media</a>
-      <a href="https://www.youtube.com/@ARCRaidersGame/videos" target="_blank" rel="noopener noreferrer">YouTube</a>
-      <a href="https://arcraiders.com/en/#purchase" target="_blank" rel="noopener noreferrer"
-        class="button_button__HOmVR button_button-color-light__QvtV1 button_button-text-default__cfuPA header_ctaButton__B_Zf4">
-        Pre-Order
-      </a>
-    </div>
-  </div>
-</header>
-
-
-
-  <!-- ---------- MAIN ---------- -->
-  <main id="countdown">
-    <!-- Hero background -->
-    <img src="img/hero-bg-1.jpg" alt="" class="hero-bg" />
-
-    <h1>Countdown to October 30, 2025</h1>
-
-    <div class="countdown">
-      <div class="time-box">
-        <div class="time" id="days">0</div>
-        <div class="label">Days</div>
-      </div>
-      <div class="time-box">
-        <div class="time" id="hours">0</div>
-        <div class="label">Hours</div>
-      </div>
-      <div class="time-box">
-        <div class="time" id="minutes">0</div>
-        <div class="label">Minutes</div>
-      </div>
-      <div class="time-box">
-        <div class="time" id="seconds">0</div>
-        <div class="label">Seconds</div>
-      </div>
-    </div>
-
-    <div class="divider"></div>
-    <p>October 30, 2025 — it’s coming sooner than you think.</p>
-
-    <!-- Cards row -->
-    <div class="cards-row">
-      <img src="img/card-300x100.png" alt="Card 1" />
-      <img src="img/card-300x100 (1).png" alt="Card 2" />
-      <img src="img/card-300x100.jpg" alt="Card 4" />
-    </div>
-  </main>
-
-  <footer>Made by @QuarkX#0618 (Add me in game!) ||  Discord: @AstranaOfficial</footer>
-
-  <script>
-    const targetDate = new Date("October 30, 2025 00:00:00").getTime();
-
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const diff = targetDate - now;
-
-      if (diff <= 0) {
-        document.querySelector("main").innerHTML = "<h1>🎉 It's October 30, 2025!</h1>";
-        return;
-      }
-
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-      const minutes = Math.floor((diff / (1000 * 60)) % 60);
-      const seconds = Math.floor((diff / 1000) % 60);
-
-      document.getElementById("days").textContent = days;
-      document.getElementById("hours").textContent = hours;
-      document.getElementById("minutes").textContent = minutes;
-      document.getElementById("seconds").textContent = seconds;
+    if (diff <= 0) {
+      document.querySelector("main").innerHTML = "<h1>🎉 It's October 30, 2025!</h1>";
+      return;
     }
 
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-  </script>
-</body>
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
 
-</html>
+    document.getElementById("days").textContent = days;
+    document.getElementById("hours").textContent = hours;
+    document.getElementById("minutes").textContent = minutes;
+    document.getElementById("seconds").textContent = seconds;
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
